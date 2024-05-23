@@ -37,5 +37,5 @@ steps:
     ConnectionType: 'AzureRM'
     azureSubscription: 'Azure subscription 1(df282c61-6894-4fce-b98a-776e4aaf2ddf)'
     appType: 'webApp'
-    WebAppName: 
-    packageForLinux: '$(bulid.DefaultWorkingDirectory)/**/*.zip'
+    WebAppName: 'kewinkuo'
+    packageForLinux: '$(Build.DefaultWorkingDirectory)/**/*.zip'
