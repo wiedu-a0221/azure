@@ -58,3 +58,9 @@ steps:
     appType: 'webApp'
     WebAppName: 'kewinkuo'
     packageForLinux: '$(Build.ArtifactStagingDirectory)/**/*.zip'
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(build.artifactStagingDirectory)'
+    Contents: '**\specific-file-name.zip'
+    TargetFolder: '$(build.artifactStagingDirectory)/output'
+
