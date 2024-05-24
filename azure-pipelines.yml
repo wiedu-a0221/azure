@@ -31,6 +31,14 @@ steps:
   inputs:
     PathtoPublish: '$(System.DefaultWorkingDirectory)/build$(Build.BuildId).zip'
     artifactName: 'drop'
+- task: CopyFiles@2
+  inputs:
+    contents: '**/*.zip'
+    targetFolder: '$(Build.ArtifactStagingDirectory)'
+- task: PublishBuildArtifacts@1
+  inputs:
+      ArtifactName: 'drop'
+      publishLocation: 'Container'
 - task: DownloadBuildArtifacts@1
   inputs:
     buildType: 'current'
