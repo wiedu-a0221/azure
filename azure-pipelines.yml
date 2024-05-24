@@ -51,13 +51,13 @@ steps:
 #     platform: '$(buildPlatform)'
 #     configuration: '$(buildConfiguration)'
 
-- task: AzureRmWebAppDeployment@4
-  inputs:
-    ConnectionType: 'AzureRM'
-    azureSubscription: 'Azure subscription 1(df282c61-6894-4fce-b98a-776e4aaf2ddf)'
-    appType: 'webApp'
-    WebAppName: 'kewinkuo'
-    packageForLinux: '$(Build.ArtifactStagingDirectory)/**/*.zip'
+# - task: AzureRmWebAppDeployment@4
+#   inputs:
+#     ConnectionType: 'AzureRM'
+#     azureSubscription: 'Azure subscription 1(df282c61-6894-4fce-b98a-776e4aaf2ddf)'
+#     appType: 'webApp'
+#     WebAppName: 'kewinkuo'
+#     packageForLinux: '$(Build.ArtifactStagingDirectory)/**/*.zip'
 - task: CopyFiles@2
   inputs:
     SourceFolder: '$(build.artifactStagingDirectory)'
